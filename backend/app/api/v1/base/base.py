@@ -16,6 +16,11 @@ from app.utils.password import get_password_hash, verify_password
 router = APIRouter()
 
 
+@router.post("register",summary="获取token")
+async def register_access_token(credentials_register:CredentialsRegisterSchema):
+    return Success(data={})
+
+
 @router.post("/access_token", summary="获取token")
 async def login_access_token(credentials: CredentialsSchema):
     user: User = await user_controller.authenticate(credentials)

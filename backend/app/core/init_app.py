@@ -70,8 +70,8 @@ async def init_superuser():
         await user_controller.create_user(
             UserCreate(
                 username="admin",
-                email="admin@admin.com",
-                password="123456",
+                email="fanghongjian@geetest.com",
+                password="fhjqw123666",
                 is_active=True,
                 is_superuser=True,
             )
